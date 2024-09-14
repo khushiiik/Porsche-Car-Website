@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    
+}
+
+
+
+
+.navbar {
+    padding: 0.5rem 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+
+}
+
+.logo img {
+    width: 140px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.nav-list li a:hover {
+    color: #C19939;
+}
+
+/* Styling for sections */
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* Default background for the body */
+body.default-background {
+    background-image: url("porscheBG.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Specific backgrounds for sections */
+.section#home {
+    background-image: url('porscheBG.jpg');
+	background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section#models {
+    background-image: url('models.png');
+	background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section#services {
+    background-image: url('services.png');
+	background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Ensure the #news section is still full-screen */
+/* Styling the section to ensure it occupies the full viewport */
+.section#news {
+    position: relative; /* Ensure proper positioning of the video */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Prevent scrollbars from appearing */
+    background-color: black; /* Optional: Background color */
+}
+
+/* Rotate and scale the video */
+#news-video {
+    position: absolute; /* Position the video relative to the section */
+	top: 50%;
+    left: 50%;
+    width: 70vw;
+    height: 200vh; /* Full viewport height */
+    object-fit: cover; /* Cover the screen while maintaining aspect ratio */
+    transform: translate(-50%, -50%) rotate(270deg); /* Rotate the video and center it */
+    border: none; /* Remove any default borders */
+}
+
+
